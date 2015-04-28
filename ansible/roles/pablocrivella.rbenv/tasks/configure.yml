@@ -1,0 +1,2 @@
+---
+- include: "{{ rbenv_env }}/configure.yml"

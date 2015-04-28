@@ -1,0 +1,20 @@
+---
+- hosts: all
+
+  pre_tasks:
+  - include: tasks/libmysqlclient.yml
+
+  roles:
+  - role: pablocrivella.rbenv
+    rbenv_env: user
+    rbenv_version: v0.4.0
+    rbenv_global: 2.1.6
+    rbenv_rubies:
+      - 2.1.6
+    rbenv_default_gems:
+      - bundler
+      - pry
+      - foreman
+    rbenv_users:
+      - name: root
+        home: /root
